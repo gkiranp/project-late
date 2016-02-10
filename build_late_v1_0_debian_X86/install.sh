@@ -1,5 +1,14 @@
 #!/bin/bash
+echo "------------------------------------------------------"
 echo "Installing Log Analysis Tool and Engineering (LATE)..."
+echo "------------------------------------------------------"
+echo "Sorry, this is a dirty way of installation...."
+echo "But, it works somehow !!!!"
+echo "------------------------------------------------------"
+echo "Author : Kiran Puranik (gkiranp@gmail.com)"
+echo "License Terms :"
+cat ./license.text
+echo "------------------------------------------------------"
 chmod 777 ./*
 mkdir -p /opt/qt-5.4.2/
 cp ./libQt5Core.so.5.4.2  ./libQt5Gui.so.5.4.2  ./libQt5Widgets.so.5.4.2 /usr/lib/i386-linux-gnu/
