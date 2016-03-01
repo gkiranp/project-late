@@ -3,6 +3,10 @@ Log Analysis Tool and Engineering (LATE) is an experimental project created to h
 
 Author : Kiran Puranik
 
+Updates:
+Mar 01,2016 : I am going open source !!
+I have committed source code to GitHub. Now you can download source code of my project-late, and free to play with it.
+
 License Terms : Log Analysis Tool and Engineering [LATE] is an experimental tool designed by keeping in mind it shall provide positive benefits to its user. This tool is not tested properly and hence, surely will contain unattended bugs. Author will not be responsible for any harmful action happened by installing or using this tool or its any of the components in any of the user machine. So, please use this tool by your own risk.
 
 This tool is designed using Qt open-source framework, version number 5.4.2. All the license terms and conditions applicable to Qt framework will be applicable to this tool also. Hence, author will automatically assume that, user has agreed for all the license terms and conditions of Qt framework will be applicable to him/her by installing or using this tool by any means. To read more about Qt framework and its licensing terms and conditions, please visit http://www.qt.io/licensing/.
