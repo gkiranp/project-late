@@ -1,0 +1,13 @@
+<RCC>
+    <qresource prefix="/res">
+        <file>res/iconmonstr-bookmark-30-240.png</file>
+        <file>res/iconmonstr-download-9-240.png</file>
+        <file>res/iconmonstr-filter-4-240.png</file>
+        <file>res/iconmonstr-magnifier-4-240.png</file>
+        <file>res/iconmonstr-weather-96-240.png</file>
+        <file>res/iconmonstr-text-16-240.png</file>
+    </qresource>
+    <qresource prefix="/ico">
+        <file>res/cmbico.png</file>
+    </qresource>
+</RCC>

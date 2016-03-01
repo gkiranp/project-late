@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="font">
+   <font>
+    <family>Monospace</family>
+    <pointsize>10</pointsize>
+   </font>
+  </property>
+  <property name="windowTitle">
+   <string>Log Analysis Tool and Engineering :: LATE</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="resources.qrc">
+    <normaloff>:/res/res/iconmonstr-weather-96-240.png</normaloff>:/res/res/iconmonstr-weather-96-240.png</iconset>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">/* +++ Main Window +++ */
+#MainWindow{
+background-color: #282828;
+}
+#centralWidget{
+background-color: #282828;
+}
+
+#rtxtLogBrowser{
+border: 1px solid #3A3A3A;
+border-radius:5px;
+}
+
+/* !! Custom Scroll Bar !! */
+QScrollBar:vertical {
+background: #ededed; width: 8px; 
+}
+QScrollBar::handle:vertical {
+background: QLinearGradient( x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #5077ea,  stop: 1 #5ddced); min-height: 40px;
+}
+QScrollBar::handle:vertical:hover {
+background: QLinearGradient( x1: 0, y1: 0, x2: 0, y2: 1, stop: 1 #0037db,  stop: 0 #0037db);
+}
+QScrollBar::add-line:vertical { 
+background: #75a1ff; height: 0px; subcontrol-position: bottom;   subcontrol-origin: margin; 
+}
+QScrollBar::sub-line:vertical { 
+background: #75a1ff; height: 0px; subcontrol-position: top;  subcontrol-origin: margin;
+}
+
+QScrollBar:horizontal {
+background: #ededed; 
+height:8px;
+}
+QScrollBar::handle:horizontal {
+background: QLinearGradient( x1: 0, y1: 0, x2: 1, y2: 0, stop: 0 #5077ea,  stop: 1 #5ddced);
+min-width: 40px;
+}
+QScrollBar::handle:horizontal:hover {
+background: QLinearGradient( x1: 0, y1: 0, x2: 1, y2: 0, stop: 1 #0037db,  stop: 0 #0037db);
+}
+QScrollBar::add-line:horizontal {
+background: #75a1ff;
+width: 0px;
+subcontrol-position: bottom; 
+subcontrol-origin: margin;
+}
+QScrollBar::sub-line:horizontal {
+background: #75a1ff;
+width: 0px;
+subcontrol-position: top;
+subcontrol-origin: margin;
+}</string>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <layout class="QGridLayout" name="gridLayout">
+    <property name="leftMargin">
+     <number>4</number>
+    </property>
+    <property name="topMargin">
+     <number>4</number>
+    </property>
+    <property name="rightMargin">
+     <number>4</number>
+    </property>
+    <property name="bottomMargin">
+     <number>4</number>
+    </property>
+    <item row="0" column="0">
+     <widget class="QTextEdit" name="rtxtLogBrowser">
+      <property name="font">
+       <font>
+        <family>Courier 10 Pitch</family>
+        <pointsize>9</pointsize>
+       </font>
+      </property>
+      <property name="lineWrapMode">
+       <enum>QTextEdit::NoWrap</enum>
+      </property>
+      <property name="textInteractionFlags">
+       <set>Qt::LinksAccessibleByKeyboard|Qt::LinksAccessibleByMouse|Qt::TextBrowserInteraction|Qt::TextEditable|Qt::TextEditorInteraction|Qt::TextSelectableByKeyboard|Qt::TextSelectableByMouse</set>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QToolBar" name="mainToolBar">
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="actionFormat"/>
+   <addaction name="actionOpen"/>
+   <addaction name="actionFilter"/>
+   <addaction name="actionFind"/>
+   <addaction name="actionExport"/>
+  </widget>
+  <action name="actionOpen">
+   <property name="icon">
+    <iconset resource="resources.qrc">
+     <normaloff>:/res/res/iconmonstr-bookmark-30-240.png</normaloff>:/res/res/iconmonstr-bookmark-30-240.png</iconset>
+   </property>
+   <property name="text">
+    <string>Open</string>
+   </property>
+   <property name="toolTip">
+    <string>Open File</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+O</string>
+   </property>
+  </action>
+  <action name="actionFilter">
+   <property name="icon">
+    <iconset resource="resources.qrc">
+     <normaloff>:/res/res/iconmonstr-filter-4-240.png</normaloff>:/res/res/iconmonstr-filter-4-240.png</iconset>
+   </property>
+   <property name="text">
+    <string>Filter</string>
+   </property>
+   <property name="toolTip">
+    <string>Apply Filter</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Shift+F</string>
+   </property>
+  </action>
+  <action name="actionFind">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="resources.qrc">
+     <normaloff>:/res/res/iconmonstr-magnifier-4-240.png</normaloff>:/res/res/iconmonstr-magnifier-4-240.png</iconset>
+   </property>
+   <property name="text">
+    <string>Find</string>
+   </property>
+   <property name="toolTip">
+    <string>Find...</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+F</string>
+   </property>
+  </action>
+  <action name="actionExport">
+   <property name="icon">
+    <iconset resource="resources.qrc">
+     <normaloff>:/res/res/iconmonstr-download-9-240.png</normaloff>:/res/res/iconmonstr-download-9-240.png</iconset>
+   </property>
+   <property name="text">
+    <string>Export</string>
+   </property>
+   <property name="toolTip">
+    <string>Export...</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+E</string>
+   </property>
+  </action>
+  <action name="actionFormat">
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="resources.qrc">
+     <normaloff>:/res/res/iconmonstr-text-16-240.png</normaloff>:/res/res/iconmonstr-text-16-240.png</iconset>
+   </property>
+   <property name="text">
+    <string>Format</string>
+   </property>
+   <property name="toolTip">
+    <string>Format Logs</string>
+   </property>
+   <property name="shortcut">
+    <string>Alt+F</string>
+   </property>
+  </action>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources>
+  <include location="resources.qrc"/>
+ </resources>
+ <connections/>
+</ui>
