@@ -1,5 +1,5 @@
 # project-late
-Log Analysis Tool and Engineering (LATE) is an experimental project created to help people all around globe to analyse and format huge set of logs been generated from any system.
+Log Analysis Tool and Engineering (LATE) is an experimental project created using C++ and Qt(5.x) to help users to filter, format and analyse huge set of text-based logs, been generated from distributed system.
 
 Author : Kiran Puranik
 
